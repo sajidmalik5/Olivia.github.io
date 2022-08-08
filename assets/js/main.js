@@ -20,8 +20,13 @@ if (navClose) {
 }
 
 /*=============== REMOVE MENU MOBILE ===============*/
+const navLink = document.querySelectorAll(".nav__link");
 
-/*=============== ACCORDION SKILLS ===============*/
+function linkAction() {
+  const navMenu = document.getElementById("nav-menu");
+  navMenu.classList.remove("show-menu");
+}
+navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 /*=============== QUALIFICATION TABS ===============*/
 const tabs = document.querySelectorAll("[data-target]"),
